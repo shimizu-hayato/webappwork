@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".scroll_up").click(function(){
+					var targetY = $("body").offset().top;
+					$("html,body").animate({scrollTop:targetY});
+				});
+
+				$(".scroll_down").click(function(){
+					var scrollHeight = $(document).height();
+					$("html,body").animate({scrollTop:scrollHeight});
+				});
+
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 200) {
+						$(".scroll_up").fadeIn();
+					} else {
+						$(".scroll_up").fadeOut();
+					}
+				});
+
+				$(window).scroll(function() {
+				     console.log($(this).scrollTop());
+
+				     if ($(this).scrollTop() > 1600) {
+				         $(".scroll_down").fadeOut();
+				     } else {
+				         $(".scroll_down").fadeIn();
+				     }
+				});
+			});
+
+			
+		</script>
+		<style type="text/css">
+		<!--
+			body{
+				margin: 0;
+				padding: 0; 
+				height: 1800px;
+			}
+
+			.scroll_up{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				color:#fff;
+				background-color: green;
+				position: fixed;
+				right: 0;
+				bottom: 50px;
+				text-align:center;
+				line-height: 50px;
+			}
+
+			.scroll_down{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+				color:#fff;
+				position: fixed;
+				right: 0;
+				bottom: 0;
+				text-align:center;
+				line-height: 50px;
+			}
+
+			.container {
+			    max-width: 480px;
+			    width: calc(100% - 50px);
+			    margin-right: auto;
+			    margin-left: auto;
+			}
+			
+		-->
+		</style>
+		<title>Scroll</title>					
+	</head>
+
+	<body>
+		<div class="container">
+		<h1>What is Ruby?</h1>
+        <p>
+        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus congue diam, nec vehicula eros laoreet vitae. Sed pharetra eleifend blandit. Mauris lacinia maximus nulla sit amet tempor. Duis accumsan a dui non finibus. Cras tincidunt volutpat interdum. Ut congue imperdiet nunc, ornare placerat sem porta nec. Donec dui leo, hendrerit eu suscipit vitae, feugiat vitae ipsum. Phasellus pretium pharetra ipsum. Donec scelerisque sodales lectus sit amet iaculis.
+    	</p>
+    	<p>
+			Maecenas iaculis justo sed dolor condimentum posuere. Sed tellus tellus, ultrices ac felis eget, efficitur rhoncus nisi. Proin rutrum libero non accumsan sollicitudin. Maecenas non nisi hendrerit, posuere quam eget, finibus tellus. Maecenas ex mi, consectetur eu sollicitudin eget, pellentesque non neque. Morbi non nibh sem. Praesent eu leo dui. Pellentesque finibus iaculis commodo. Quisque ut dapibus dolor. Pellentesque dolor ex, fringilla sit amet elementum eget, porttitor quis tortor.
+		</p>
+		<p>
+			Nullam at dui vehicula, scelerisque dolor ut, dignissim massa. Quisque facilisis neque sed ex ultrices finibus. Praesent luctus lacus blandit mauris placerat, vel porta purus blandit. Aliquam mollis ante eu fringilla semper. Praesent tempus quam felis, ut pellentesque risus ullamcorper nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras vitae nisl massa.
+		</p>
+		<p>
+			Phasellus tristique, sem ut sagittis vehicula, elit nibh fringilla turpis, eget imperdiet libero velit vitae eros. In hac habitasse platea dictumst. Vestibulum eget neque arcu. Sed dictum tortor ex, eget dignissim purus luctus sit amet.	 Aliquam nec turpis sollicitudin, gravida libero sit amet, pellentesque ligula. Donec mattis nec metus a vehicula. Sed gravida mi a sem suscipit interdum. Ut ex tortor, eleifend vitae ipsum sed, aliquam ultricies magna. In commodo turpis vitae ultrices consectetur. Sed pulvinar ex quis augue accumsan, vitae vehicula dui lacinia. Etiam lectus felis, efficitur ut risus eu, elementum scelerisque leo. Donec sem mi, convallis quis vehicula ut, tempus nec ligula.
+		</p>
+		<p>
+			Cras bibendum vitae nisl sit amet sollicitudin. Etiam ac leo fermentum, consequat diam in, mattis nisi. Praesent vehicula vulputate dolor vel fringilla. Etiam suscipit mauris vitae tempus consectetur. Pellentesque vitae rutrum nibh, non blandit mauris. Nulla vitae pharetra tellus. Vestibulum lobortis est in posuere luctus. Nullam dictum purus eu purus porta varius eu sit amet dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		</p>
+
+		<p>
+        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus congue diam, nec vehicula eros laoreet vitae. Sed pharetra eleifend blandit. Mauris lacinia maximus nulla sit amet tempor. Duis accumsan a dui non finibus. Cras tincidunt volutpat interdum. Ut congue imperdiet nunc, ornare placerat sem porta nec. Donec dui leo, hendrerit eu suscipit vitae, feugiat vitae ipsum. Phasellus pretium pharetra ipsum. Donec scelerisque sodales lectus sit amet iaculis.
+    	</p>
+    	<p>
+			Maecenas iaculis justo sed dolor condimentum posuere. Sed tellus tellus, ultrices ac felis eget, efficitur rhoncus nisi. Proin rutrum libero non accumsan sollicitudin. Maecenas non nisi hendrerit, posuere quam eget, finibus tellus. Maecenas ex mi, consectetur eu sollicitudin eget, pellentesque non neque. Morbi non nibh sem. Praesent eu leo dui. Pellentesque finibus iaculis commodo. Quisque ut dapibus dolor. Pellentesque dolor ex, fringilla sit amet elementum eget, porttitor quis tortor.
+		</p>
+		<p>
+			Nullam at dui vehicula, scelerisque dolor ut, dignissim massa. Quisque facilisis neque sed ex ultrices finibus. Praesent luctus lacus blandit mauris placerat, vel porta purus blandit. Aliquam mollis ante eu fringilla semper. Praesent tempus quam felis, ut pellentesque risus ullamcorper nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras vitae nisl massa.
+		</p>
+		<p>
+			Phasellus tristique, sem ut sagittis vehicula, elit nibh fringilla turpis, eget imperdiet libero velit vitae eros. In hac habitasse platea dictumst. Vestibulum eget neque arcu. Sed dictum tortor ex, eget dignissim purus luctus sit amet.	 Aliquam nec turpis sollicitudin, gravida libero sit amet, pellentesque ligula. Donec mattis nec metus a vehicula. Sed gravida mi a sem suscipit interdum. Ut ex tortor, eleifend vitae ipsum sed, aliquam ultricies magna. In commodo turpis vitae ultrices consectetur. Sed pulvinar ex quis augue accumsan, vitae vehicula dui lacinia. Etiam lectus felis, efficitur ut risus eu, elementum scelerisque leo. Donec sem mi, convallis quis vehicula ut, tempus nec ligula.
+		</p>
+		<p>
+			Cras bibendum vitae nisl sit amet sollicitudin. Etiam ac leo fermentum, consequat diam in, mattis nisi. Praesent vehicula vulputate dolor vel fringilla. Etiam suscipit mauris vitae tempus consectetur. Pellentesque vitae rutrum nibh, non blandit mauris. Nulla vitae pharetra tellus. Vestibulum lobortis est in posuere luctus. Nullam dictum purus eu purus porta varius eu sit amet dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		</p>
+		</div>
+		<div class="scroll_up" style="display: none;">
+			up
+		</div>
+		<div class="scroll_down">
+			down
+		</div>
+	</body>
+</html>

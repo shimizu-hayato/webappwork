@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+		$(function () {
+			
+			$("div").click(function(){
+				var switch_flg = $(this).hasClass("active");
+				
+				if (switch_flg) {
+					$(".button").text("メニュー1");
+					$(this).removeClass("active");
+					$("#menu2").hide();
+					$("#menu1").show();
+				}else{
+					$(".button").text("メニュー2");
+					$(this).addClass("active");
+					$("#menu1").hide();
+					$("#menu2").show();
+				}
+			});
+			
+		});
+	</script>
+	<style type="text/css">
+	<!--
+		.button{
+			width:100px;
+			margin-top:10px;
+			margin-bottom: 10px;
+			padding:5px;
+			color:#fff;
+			background-color:#09C;
+			cursor : pointer;
+		}
+
+		.button:hover{
+			opacity: 0.6;
+		}
+
+		ul.foo {
+		    display:table;
+		    table-layout:fixed;
+		    width:500px;
+		    padding-bottom: 40px;
+		    margin: 0;
+		    padding: 0;
+		}
+		ul.foo li {
+		    display:table-cell;
+		    vertical-align:middle;
+		    text-align:center;
+		    border-left:1px solid white;
+		    padding: 0;
+		}
+		ul.foo li:first-child {
+		    border:none;    
+		}
+		ul.foo li a {
+		    display:block;
+		    text-decoration:none;
+		    color:white;
+		}
+		
+		.active{
+			background-color:#F60;
+		}
+
+		.inactive_menu {
+			display: hidden;
+		}
+
+		#menu1{
+			color:#fff;
+			background-color:#09C;
+		}
+
+		#menu2{
+			color:#fff;
+			background-color:#F60;
+		}
+	-->
+	</style>
+	<title>Toggle menu</title>
+</head>
+<body>
+	<div class=button>メニュー1</div>
+	<ul id=menu1 class="foo">
+		<li>サブメニュー1</li>
+		<li>サブメニュー2</li>
+		<li>サブメニュー3</li>
+		<li>サブメニュー4</li>
+	</ul>
+	<ul id=menu2 class="foo" style="display:none;">
+		<li>サブメニュー5</li>
+		<li>サブメニュー6</li>
+		<li>サブメニュー7</li>
+		<li>サブメニュー8</li>
+	</ul>
+</body>
+</html>
